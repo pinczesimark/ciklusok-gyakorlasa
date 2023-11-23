@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -82,24 +82,38 @@ namespace Ciklusok_gyakorlasa
             */
 
             // 4. Feladat: Írassuk ki 1000-ig az összes tökéletes számot!
+            /*     
+             for (int index = 1; index < 100001; index++)
+             {
+                 int osszeg = 0;
 
-            for (int index = 1; index < 100001; index++)
-            {
-                int osszeg = 0;
+                 for (int i = 1; i <= index; i++)
+                 {
+                     if (index % i == 0)
+                     {
+                         osszeg += i;
+                     }
+                 }
 
-                for (int i = 1; i <= index; i++)
-                {
-                    if (index % i == 0)
-                    {
-                        osszeg += i;
-                    }
-                }
+                 if (osszeg == 2 * index)
+                 {
+                     Console.WriteLine($"A szám: {index} tökéletes.");
+                 }
+             } */
 
-                if (osszeg == 2 * index)
-                {
-                    Console.WriteLine($"A szám: {index} tökéletes.");
-                }
-            }
+            // 5.feladat:
+
+            int atmero = 0;
+            double kerulet = 0.0d;
+            double terulet = 0.0d;
+
+            Console.Write("kérem az átmérőt:");
+            atmero = Int32.Parse(Console.ReadLine());
+
+            kerulet = atmero * Math.PI;
+            terulet = atmero * atmero * Math.PI / 4;
+
+            Console.WriteLine($"kerület: {kerulet:F2}, terület: {terulet:F2}");
 
             Console.ReadKey(true);
         }
